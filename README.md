@@ -1,1 +1,3 @@
 # SIH_INTERNAL_ROUND_1_ERNAKULAM
+This is a predictive model that predicts the dlar diseasisease a user may have based on the symptoms entered by the user. Based on the prediction it suggests the Precautions, Diets and other things the user should take to recover from the disease. 
+The website does not only have this functionality but also a few other features such as Heart Disease Prediction Model, Chronic Kidney Prediction Model, Lung Disease, Liver Disease etc. These models are highly sophisticated and are trained on large datasets to give high accuracy. After testing on various inputs, we get an accuracy level of upto 98%. Several models are used such as K-Nearest Neighbours, Random Forest, SVM, Logistic Regression, Gradient Boosting and SNM. 
