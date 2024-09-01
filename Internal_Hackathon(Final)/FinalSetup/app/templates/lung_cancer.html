@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Lung Cancer Prediction</h2>
+        <form action="/" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender:</label>
+                <select id="gender" name="gender" class="form-select" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" step="any" required>
+            </div>
+            <div class="mb-3">
+                <label for="smoking" class="form-label">Smoking:</label>
+                <select id="smoking" name="smoking" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="yellow_fingers" class="form-label">Yellow Fingers:</label>
+                <select id="yellow_fingers" name="yellow_fingers" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="anxiety" class="form-label">Anxiety:</label>
+                <select id="anxiety" name="anxiety" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="peer_pressure" class="form-label">Peer Pressure:</label>
+                <select id="peer_pressure" name="peer_pressure" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="chronic_disease" class="form-label">Chronic Disease:</label>
+                <select id="chronic_disease" name="chronic_disease" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="fatigue" class="form-label">Fatigue:</label>
+                <select id="fatigue" name="fatigue" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="allergy" class="form-label">Allergy:</label>
+                <select id="allergy" name="allergy" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="wheezing" class="form-label">Wheezing:</label>
+                <select id="wheezing" name="wheezing" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="alcohol_consuming" class="form-label">Alcohol Consuming:</label>
+                <select id="alcohol_consuming" name="alcohol_consuming" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="coughing" class="form-label">Coughing:</label>
+                <select id="coughing" name="coughing" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="shortness_of_breath" class="form-label">Shortness of Breath:</label>
+                <select id="shortness_of_breath" name="shortness_of_breath" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="swallowing_difficulty" class="form-label">Swallowing Difficulty:</label>
+                <select id="swallowing_difficulty" name="swallowing_difficulty" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="chest_pain" class="form-label">Chest Pain:</label>
+                <select id="chest_pain" name="chest_pain" class="form-select" required>
+                    <option value="NO">NO</option>
+                    <option value="YES">YES</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg" style="width: 100%; padding: 14px;">Predict</button>
+        </form>
+
+        <!-- Display the result if available -->
+        {% if result %}
+        <div class="mt-4">
+            <h2>Prediction Result</h2>
+            <h4>{{ result }}</h4>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
