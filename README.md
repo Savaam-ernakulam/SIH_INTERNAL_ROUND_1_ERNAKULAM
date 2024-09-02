@@ -15,8 +15,9 @@ MEMBER_6 - ROLL_NUMBER - @arpit615
 Project Links
 Internal Presentation: https://github.com/Savaam-ernakulam/SIH_INTERNAL_ROUND_1_ERNAKULAM/blob/f54b24f5474bde28ea056bc095ed5bd3acdf9115/Files/Internal_PPT_Ernakulam.pdf
 
-Final SIH Presentation: [Final SIH Presentation](URL TO PPT UPLOADED TO GITHUB)
-Video Demonstration: [Watch Video](UNLISTED YOUTUBE LINK)
-Live Deployment: [View Deployment](DEPLOYED LINK IF ANY)
-Source Code: [GitHub Repository](GITHUB LINK TO THE REPO)
-Additional Resources: [Other Relevant Links](ANY OTHER RELEVANT LINKS)
+Final SIH Presentation: https://github.com/Savaam-ernakulam/SIH_INTERNAL_ROUND_1_ERNAKULAM/blob/ba1fd01699d42246f9fbf52e39c48add83d5a54b/Files/SIH_PPT_Ernakulam.pdf
+
+Video Demonstration: https://youtu.be/1-i4Ebvmxu0
+
+Source Code: https://github.com/Savaam-ernakulam/SIH_INTERNAL_ROUND_1_ERNAKULAM/tree/main
+
