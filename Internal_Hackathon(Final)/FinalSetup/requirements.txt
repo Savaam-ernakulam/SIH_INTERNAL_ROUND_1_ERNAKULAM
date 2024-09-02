@@ -53,3 +53,4 @@ urllib3==2.2.2
 virtualenv==20.26.3
 watchdog==4.0.2
 Werkzeug==3.0.4
+gunicorn
