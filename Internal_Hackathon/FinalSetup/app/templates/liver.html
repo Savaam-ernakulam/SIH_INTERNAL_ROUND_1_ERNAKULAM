@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Disease Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Liver Disease Prediction</h2>
+        <form action="/" method="post">
+            <div class="mb-3">
+                <label for="age-liver" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age-liver" name="age" min="10" max="100" required>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender:</label>
+                <select class="form-select" id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="Total_Bilirubin" class="form-label">Total Bilirubin:</label>
+                <input type="number" step="0.01" class="form-control" id="Total_Bilirubin" name="Total_Bilirubin" required>
+            </div>
+            <div class="mb-3">
+                <label for="Direct_Bilirubin" class="form-label">Direct Bilirubin:</label>
+                <input type="number" step="0.01" class="form-control" id="Direct_Bilirubin" name="Direct_Bilirubin" required>
+            </div>
+            <div class="mb-3">
+                <label for="Alkaline_Phosphotase" class="form-label">Alkaline Phosphotase:</label>
+                <input type="number" step="0.01" class="form-control" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required>
+            </div>
+            <div class="mb-3">
+                <label for="Alamine_Aminotransferase" class="form-label">Alamine Aminotransferase:</label>
+                <input type="number" step="0.01" class="form-control" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required>
+            </div>
+            <div class="mb-3">
+                <label for="Aspartate_Aminotransferase" class="form-label">Aspartate Aminotransferase:</label>
+                <input type="number" step="0.01" class="form-control" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required>
+            </div>
+            <div class="mb-3">
+                <label for="Total_Protiens" class="form-label">Total Proteins:</label>
+                <input type="number" step="0.01" class="form-control" id="Total_Protiens" name="Total_Protiens" required>
+            </div>
+            <div class="mb-3">
+                <label for="Albumin" class="form-label">Albumin Level:</label>
+                <input type="number" step="0.01" class="form-control" id="Albumin" name="Albumin" required>
+            </div>
+            <div class="mb-3">
+                <label for="Albumin_and_Globulin_Ratio" class="form-label">Albumin and Globulin Ratio:</label>
+                <input type="number" step="0.01" class="form-control" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required>
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg" style="width: 100%; padding: 14px;">Predict</button>
+        </form>
+
+        <!-- Display the result if available -->
+        {% if result %}
+        <div class="mt-4">
+            <h2>Prediction Result</h2>
+            <h4>{{ result }}</h4>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

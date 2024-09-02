@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Kidney Disease Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Chronic Kidney Disease Prediction</h2>
+        <form method="POST" action="/chronic_kidney" >
+            <div class="mb-3">
+                <label for="age-kidney" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age-kidney" name="age" min="10" max="100" required>
+            </div>
+            <div class="mb-3">
+                <label for="bp" class="form-label">Blood Pressure:</label>
+                <input type="number" class="form-control" id="bp" name="bp" required>
+            </div>
+            <div class="mb-3">
+                <label for="sg" class="form-label">Specific Gravity:</label>
+                <input type="number" step="0.01" class="form-control" id="sg" name="sg" required>
+            </div>
+            <div class="mb-3">
+                <label for="al" class="form-label">Albumin:</label>
+                <input type="number" step="0.01" class="form-control" id="al" name="al" required>
+            </div>
+            <div class="mb-3">
+                <label for="su" class="form-label">Sugar:</label>
+                <input type="number" step="0.01" class="form-control" id="su" name="su" required>
+            </div>
+            <div class="mb-3">
+                <label for="rbc" class="form-label">Red Blood Cells:</label>
+                <select class="form-select" id="rbc" name="rbc" required>
+                    <option value="normal">Normal</option>
+                    <option value="abnormal">Abnormal</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="pc" class="form-label">Pus Cell:</label>
+                <select class="form-select" id="pc" name="pc" required>
+                    <option value="normal">Normal</option>
+                    <option value="abnormal">Abnormal</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="pcc" class="form-label">Pus Cell Clumps:</label>
+                <select class="form-select" id="pcc" name="pcc" required>
+                    <option value="present">Present</option>
+                    <option value="not_present">Not Present</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="ba" class="form-label">Bacteria:</label>
+                <select class="form-select" id="ba" name="ba" required>
+                    <option value="present">Present</option>
+                    <option value="not_present">Not Present</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="bgr" class="form-label">Blood Glucose Random:</label>
+                <input type="number" step="0.01" class="form-control" id="bgr" name="bgr" required>
+            </div>
+            <div class="mb-3">
+                <label for="bu" class="form-label">Blood Urea:</label>
+                <input type="number" step="0.01" class="form-control" id="bu" name="bu" required>
+            </div>
+            <div class="mb-3">
+                <label for="sc" class="form-label">Serum Creatinine:</label>
+                <input type="number" step="0.01" class="form-control" id="sc" name="sc" required>
+            </div>
+            <div class="mb-3">
+                <label for="sod" class="form-label">Sodium:</label>
+                <input type="number" step="0.01" class="form-control" id="sod" name="sod" required>
+            </div>
+            <div class="mb-3">
+                <label for="pot" class="form-label">Potassium:</label>
+                <input type="number" step="0.01" class="form-control" id="pot" name="pot" required>
+            </div>
+            <div class="mb-3">
+                <label for="hemo" class="form-label">Hemoglobin:</label>
+                <input type="number" step="0.01" class="form-control" id="hemo" name="hemo" required>
+            </div>
+            <div class="mb-3">
+                <label for="pcv" class="form-label">Packed Cell Volume:</label>
+                <input type="number" step="0.01" class="form-control" id="pcv" name="pcv" required>
+            </div>
+            <div class="mb-3">
+                <label for="wc" class="form-label">White Blood Cell Count:</label>
+                <input type="number" step="0.01" class="form-control" id="wc" name="wc" required>
+            </div>
+            <div class="mb-3">
+                <label for="rc" class="form-label">Red Blood Cell Count:</label>
+                <input type="number" step="0.01" class="form-control" id="rc" name="rc" required>
+            </div>
+            <div class="mb-3">
+                <label for="htn" class="form-label">Hypertension:</label>
+                <select class="form-select" id="htn" name="htn" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="dm" class="form-label">Diabetes Mellitus:</label>
+                <select class="form-select" id="dm" name="dm" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="cad" class="form-label">Coronary Artery Disease:</label>
+                <select class="form-select" id="cad" name="cad" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="appet" class="form-label">Appetite:</label>
+                <select class="form-select" id="appet" name="appet" required>
+                    <option value="good">Good</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="pe" class="form-label">Pedal Edema:</label>
+                <select class="form-select" id="pe" name="pe" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="ane" class="form-label">Anemia:</label>
+                <select class="form-select" id="ane" name="ane" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+             <button type="submit" class="btn btn-danger btn-lg" style="width: 100%; padding: 14px;">Predict</button>
+        </form>
+
+        <!-- Display the result if available -->
+        {% if result %}
+        <div class="mt-4">
+            <h2>Prediction Result</h2>
+            <h4>{{ result }}</h4>
+
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
